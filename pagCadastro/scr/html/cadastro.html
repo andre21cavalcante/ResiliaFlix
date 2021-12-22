@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-2">
           <label for="cep" class="form-label">CEP</label>
-          <input type="text" class="form-control" id="cep">
+          <input type="text" class="form-control" id="cep" maxlength="9">
         </div>
         <div class="col-6">
           <label for="nomeRua" class="form-label">Rua</label>
@@ -52,13 +52,10 @@
         </div>
         <div class="col-md-2">
           <label for="estado" class="form-label">Estado</label>
-          <select id="estado" class="form-select">
-            <option>Choose...</option>
-            <option>...</option>
-          </select>
+          <input type="text" class="form-control" id="estado" maxlength="2">
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary" id="botao">Sign in</button>
         </div>
     </form>
 
