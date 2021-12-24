@@ -1,38 +1,20 @@
-class ModelCEP{
-    // Recebe o CEP do ValidandoCep
-    constructor(cep){
-        this.cep = cep
-    }
-
-    validaCep(){
-        $.ajax({
-            // https://viacep.com.br/ws/"+ cep +"/json/?callback=?
-            url: `https://viacep.com.br/ws/${this.cep}/json/`,
-
-            success: function(request){
-                // console.log(request);
-                return request
-            },
-        
-            error: function(error){
-                console.log(error);
-                return error
-            }
-            
-        })
-    }
+function modelCEP(cep){
+    $.ajax({
+        url: `http://viacep.com.br/ws/${cep}/json/`,
+        method: 'GET',
+        success: function(requisicao){
+            viewCEP(requisicao);
+            // console.log(requisicao); 
+        },
+        error: function(error){
+            $('#cep').attr("placeholder", "CEP inválido");
+            $('#cep').val('');
+            $('#nomeRua').val('');
+            $('#bairro').val('');
+            $('#cidade').val('');
+            $('#estado').val('');
+            console.log(error);
+        }
+    })
 }
 
-// requestAPI = $.ajax({
-//     // https://viacep.com.br/ws/"+ cep +"/json/?callback=?
-//     url: `https://viacep.com.br/ws/${this.cepRecebido}/json/?callback=?`,
-
-//     success: function(request){
-//         console.log(request);
-//     },
-
-//     error: function(error){
-//         console.log(error);
-//     }
-    
-// })
