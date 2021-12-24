@@ -3,10 +3,11 @@ function modelCEP(cep){
         url: `http://viacep.com.br/ws/${cep}/json/`,
         method: 'GET',
         success: function(requisicao){
-            viewCEP(requisicao);
-            // console.log(requisicao); 
+            // Manda obj pro View
+            viewCEP(requisicao); 
         },
         error: function(error){
+            // Vai apagar o que foi escrito nesses campos caso o cep esteja errado e avisa ao user
             $('#cep').attr("placeholder", "CEP inválido");
             $('#cep').val('');
             $('#nomeRua').val('');

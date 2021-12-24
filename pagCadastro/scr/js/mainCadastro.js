@@ -1,14 +1,5 @@
-// const chamandoController = new ControllerCEP($('#cep').val())
-
-// $('#botao').click(function(e){
-//     e.preventDefault()
-//     // Chama o Controller e passa o CEP como parêmetro
-//     chamandoController.validandoCep()
-//     // console.log(chamandoController.validandoCep());
-// });
-
-
+// Gatilho
 $('#cep').focusout(function(){
+    // Envia o CEP informado pro Controller
     controllerCEP($('#cep').val())
-    // // chamandoControllerCEP.mandandoValidarCEP()
 })
