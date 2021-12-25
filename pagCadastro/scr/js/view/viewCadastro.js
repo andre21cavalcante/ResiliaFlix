@@ -5,3 +5,13 @@ function viewCEP(infoCep){
     $('#cidade').val(infoCep.localidade);
     $('#estado').val(infoCep.uf);
 }
+
+// Mostra a msg de erro
+function viewSenha(){
+    $('#msgErroSenha').css('display', 'block');
+}
+
+// Apaga a msg de erro
+function unViewSenha(){
+    $('#msgErroSenha').css('display', 'none');
+}

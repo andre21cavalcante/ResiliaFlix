@@ -6,3 +6,7 @@
 .containerForm {
     width: 800px;
 }
+
+#msgErroSenha {
+    display: none;
+}

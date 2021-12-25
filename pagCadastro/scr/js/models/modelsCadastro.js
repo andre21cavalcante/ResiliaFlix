@@ -19,3 +19,16 @@ function modelCEP(cep){
     })
 }
 
+function modelSenha(confSenha){
+    // Checa se a senha e a confirmação diferem
+    if(confSenha !== $('#senha').val()){
+        // Caso defira, exibe msg de erro
+        viewSenha();
+    }
+    // Caso a msg de erro for chamada, e o usuário corrigir, a msg irá sumir 
+    else if (confSenha === $('#senha').val() && $('#msgErroSenha').css('display') === 'block'){
+        // Apaga a msg de erro
+        unViewSenha();
+    }
+}
+
