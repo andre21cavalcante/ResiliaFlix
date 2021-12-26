@@ -6,12 +6,22 @@ function viewCEP(infoCep){
     $('#estado').val(infoCep.uf);
 }
 
-// Mostra a msg de erro
+// Mostra a msg de erro ref a senha
 function viewSenha(){
     $('#msgErroSenha').css('display', 'block');
 }
 
-// Apaga a msg de erro
+// Apaga a msg de erro ref a senha
 function unViewSenha(){
     $('#msgErroSenha').css('display', 'none');
+}
+
+// Mostra a msg de erro ref ao email
+function viewEmail(){
+    $('#msgErroEmail').css('display', 'block');
+}
+
+// Apaga a msg de erro ref ao email
+function unViewEmail(){
+    $('#msgErroEmail').css('display', 'none');
 }

@@ -32,3 +32,16 @@ function modelSenha(confSenha){
     }
 }
 
+function modelEmail(email){
+    // Checa se tem um '@' e '.' após o '@'
+    if(email.indexOf('@') > 0 && email.indexOf('.', email.indexOf('@')) >= email.indexOf('@')){
+        // Checa se a msg de erro está sendo exibida e apaga
+        if($('#msgErroEmail').css('display') === 'block'){
+            unViewEmail()
+        }
+    } 
+    // Mostra msg de erro
+    else {
+        viewEmail()
+    }
+}

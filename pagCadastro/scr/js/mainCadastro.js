@@ -9,3 +9,9 @@ $('#confSenha').focusout(function(){
     // Envia senha para Controller
     controllerSenha($('#confSenha').val());
 });
+
+// Gatilho pro email
+$('#email').focusout(function(){
+    // Envia o email informado pro Controller
+    controllerEmail($('#email').val());
+});
