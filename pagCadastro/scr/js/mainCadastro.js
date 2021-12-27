@@ -15,3 +15,7 @@ $('#email').focusout(function(){
     // Envia o email informado pro Controller
     controllerEmail($('#email').val());
 });
+
+$('#rg').keypress(function(e){
+    controllerRG($('#rg'));
+});

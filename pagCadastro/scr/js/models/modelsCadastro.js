@@ -37,11 +37,36 @@ function modelEmail(email){
     if(email.indexOf('@') > 0 && email.indexOf('.', email.indexOf('@')) >= email.indexOf('@')){
         // Checa se a msg de erro está sendo exibida e apaga
         if($('#msgErroEmail').css('display') === 'block'){
-            unViewEmail()
+            unViewEmail();
         }
     } 
     // Mostra msg de erro
     else {
-        viewEmail()
+        viewEmail();
+    }
+}
+
+function modelRG(rg){
+    // Checa se todos os campos do RG foram preenchidos
+    $('#rg').focusout(function(){
+        
+        if($('#rg').val().length !== 14){
+            // Caso não tenham sido, mostra msg de erro
+            viewRG();
+        } else if($('#rg').val().length === 14 && $('#msgErroRG').css('display') === 'block'){
+            // Apaga msg de erro
+            unViewRG();
+        }
+    });
+
+    // Add '.' e '-' aos lugares
+    if(rg.val().length === 3 || rg.val().length === 7){
+        rg.val(function(){
+            return this.value += '.';
+        });
+    } else if (rg.val().length === 11){
+        rg.val(function(){
+            return this.value += '-';
+        });
     }
 }

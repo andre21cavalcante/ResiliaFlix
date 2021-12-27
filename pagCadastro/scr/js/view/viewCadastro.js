@@ -25,3 +25,13 @@ function viewEmail(){
 function unViewEmail(){
     $('#msgErroEmail').css('display', 'none');
 }
+
+// Mostra a msg de erro ref ao RG
+function viewRG(){
+    $('#msgErroRG').css('display', 'block');
+}
+
+// Apaga a msg de erro ref ao RG
+function unViewRG(){
+    $('#msgErroRG').css('display', 'none');
+}
