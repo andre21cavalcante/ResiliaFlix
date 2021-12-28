@@ -17,5 +17,5 @@ $('#email').focusout(function(){
 });
 
 $('#rg').keypress(function(e){
-    controllerRG($('#rg'));
+    controllerRG(e, $('#rg'));
 });

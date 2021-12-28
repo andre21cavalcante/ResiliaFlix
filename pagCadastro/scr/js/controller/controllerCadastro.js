@@ -13,6 +13,6 @@ function controllerEmail(email){
     modelEmail(email);
 }
 
-function controllerRG(rg){
-    modelRG(rg);
+function controllerRG(e, rg){
+    modelRG(e, rg);
 }

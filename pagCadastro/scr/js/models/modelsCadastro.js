@@ -46,7 +46,13 @@ function modelEmail(email){
     }
 }
 
-function modelRG(rg){
+function modelRG(e, rg){
+
+    // Se o valor retornado for falso, irá bloquear a entrada
+    if(!checandoCaracteres(e)){
+        e.preventDefault()
+    }
+
     // Checa se todos os campos do RG foram preenchidos
     $('#rg').focusout(function(){
         
@@ -68,5 +74,16 @@ function modelRG(rg){
         rg.val(function(){
             return this.value += '-';
         });
+    }
+}
+
+// Checa pra ver se o que está sendo escrito é número
+function checandoCaracteres(e){
+    const caractere = String.fromCharCode(e.keyCode);
+    const padrao = '[0-9]';
+    
+    // Caso seja retorna True
+    if(caractere.match(padrao)){
+        return true;
     }
 }
