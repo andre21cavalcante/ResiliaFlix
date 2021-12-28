@@ -7,7 +7,7 @@
   }
 
 .imagem-logo{
-    
+    width: 100px;
 }
 
 .cabeçalho-resilia{
@@ -46,14 +46,18 @@ body{
 
 .containerForm {
     background-color: #ffffff;
-    width: 800px;
+    width: fit-content;
     height: fit-content;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 2px 2px 30px rgba(50, 50, 50, 20%);
-    margin: 20px;
-
+    margin: 50px 20px;
+    
     align-self: center;
+}
+
+.msgErro {
+    color: #e84600;
 }
 
 #msgErroSenha {
