@@ -46,7 +46,7 @@ body{
 
 .containerForm {
     background-color: #ffffff;
-    width: fit-content;
+    max-width: 800px;
     height: fit-content;
     padding: 50px;
     border-radius: 10px;

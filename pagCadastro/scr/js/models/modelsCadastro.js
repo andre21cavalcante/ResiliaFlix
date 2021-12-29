@@ -8,13 +8,8 @@ function modelCEP(cep){
         },
         error: function(error){
             // Vai apagar o que foi escrito nesses campos caso o cep esteja errado e avisa ao user
-            $('#cep').attr("placeholder", "CEP inválido");
-            $('#cep').val('');
-            $('#nomeRua').val('');
-            $('#bairro').val('');
-            $('#cidade').val('');
-            $('#estado').val('');
-            console.log(error);
+            viewMsgErroCEP();
+            throw 'CEP inválido ou API Offline';
         }
     })
 }
@@ -46,26 +41,10 @@ function modelEmail(email){
     }
 }
 
-function modelRG(e, rg){
+// Funções ref. ao RG:
 
-    // Se o valor retornado for falso, irá bloquear a entrada
-    if(!checandoCaracteres(e)){
-        e.preventDefault()
-    }
-
-    // Checa se todos os campos do RG foram preenchidos
-    $('#rg').focusout(function(){
-        
-        if($('#rg').val().length !== 14){
-            // Caso não tenham sido, mostra msg de erro
-            viewRG();
-        } else if($('#rg').val().length === 14 && $('#msgErroRG').css('display') === 'block'){
-            // Apaga msg de erro
-            unViewRG();
-        }
-    });
-
-    // Add '.' e '-' aos lugares
+// Add '.' e '-' aos lugares
+function addMascaraRG(rg){
     if(rg.val().length === 3 || rg.val().length === 7){
         rg.val(function(){
             return this.value += '.';
@@ -78,7 +57,7 @@ function modelRG(e, rg){
 }
 
 // Checa pra ver se o que está sendo escrito é número
-function checandoCaracteres(e){
+function bloqueandoLetras(e){
     const caractere = String.fromCharCode(e.keyCode);
     const padrao = '[0-9]';
     
@@ -87,3 +66,28 @@ function checandoCaracteres(e){
         return true;
     }
 }
+
+// Checa se todos os campos do RG foram preenchidos
+$('#rg').focusout(function(){
+    
+    if($('#rg').val().length !== 14){
+        // Caso não tenham sido, mostra msg de erro
+        viewRG();
+    } else if($('#rg').val().length === 14 && $('#msgErroRG').css('display') === 'block'){
+        // Apaga msg de erro
+        unViewRG();
+    }
+});
+
+function modelRG(e, rg){
+    
+    // Add '.' e '-' aos lugares
+    addMascaraRG(rg)
+
+    // Se o valor retornado for falso, irá bloquear a entrada
+    if(!bloqueandoLetras(e)){
+        e.preventDefault()
+    }
+}
+
+

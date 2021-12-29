@@ -6,6 +6,16 @@ function viewCEP(infoCep){
     $('#estado').val(infoCep.uf);
 }
 
+// Irá resetar o que foi inputado e exibe msg de Erro
+function viewMsgErroCEP(){
+    $('#cep').attr("placeholder", "CEP inválido");
+    $('#cep').val('');
+    $('#nomeRua').val('');
+    $('#bairro').val('');
+    $('#cidade').val('');
+    $('#estado').val('');
+}
+
 // Mostra a msg de erro ref a senha
 function viewSenha(){
     $('#msgErroSenha').css('display', 'block');
