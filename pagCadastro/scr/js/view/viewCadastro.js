@@ -45,3 +45,7 @@ function viewRG(){
 function unViewRG(){
     $('#msgErroRG').css('display', 'none');
 }
+
+function viewBotao(){
+    $('#msgErroBotao').css('display', 'block');
+}

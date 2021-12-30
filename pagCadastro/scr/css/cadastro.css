@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .b-example-divider {
     height: 3rem;
     background-color: rgba(0, 0, 0, .1);
@@ -73,6 +79,12 @@ body{
 }
 
 #botao {
-    margin-top: 50px;
+    
     color: #ffffff;
 }
+
+#msgErroBotao{
+    display: none;
+    color: #e84600;
+}
+

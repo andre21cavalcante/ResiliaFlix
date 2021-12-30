@@ -14,5 +14,10 @@ function controllerEmail(email){
 }
 
 function controllerRG(e, rg){
+    // Manda para o Model fazer a validação e dá continuidade a pipeline
     modelRG(e, rg);
+}
+
+function controllerBotao(e){
+    modelBotao(e)
 }

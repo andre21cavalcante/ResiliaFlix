@@ -16,6 +16,11 @@ $('#email').focusout(function(){
     controllerEmail($('#email').val());
 });
 
+//Gatilho pro RG
 $('#rg').keypress(function(e){
     controllerRG(e, $('#rg'));
+});
+
+$('#botao').click(function(e){
+    controllerBotao(e)
 });

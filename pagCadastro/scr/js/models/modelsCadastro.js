@@ -91,3 +91,25 @@ function modelRG(e, rg){
 }
 
 
+function modelBotao(e){
+
+    const listaDeInputs = [
+        $('#nome'),
+        $('#email'),
+        $('#rg'),
+        $('#senha'),
+        $('#confSenha'),
+        $('#cep'),
+        $('#nomeRua'),
+        $('#bairro'),
+        $('#cidade'),
+        $('#estado'),
+    ]
+
+    for(let i = 0; i < listaDeInputs.length; i++){
+        if(listaDeInputs[i].val() === ''){
+            viewBotao()
+            e.preventDefault()
+        }
+    }
+}

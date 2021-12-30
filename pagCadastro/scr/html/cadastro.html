@@ -35,7 +35,8 @@
         </div>
       </div>
     </nav>
-    <form class="row g-3 containerForm">
+
+    <form class="row g-3 mx-auto containerForm">
       <div class="col-md-8">
         <label for="nome" class="form-label">Nome</label>
         <input type="text" class="form-control" id="nome">
@@ -75,6 +76,10 @@
         <label for="complemento" class="form-label">Complemento</label>
         <input type="text" class="form-control" id="complemento" placeholder="Apt., altos...">
       </div>
+      <div class="col-md-2">
+        <label for="estado" class="form-label">Estado</label>
+        <input type="text" class="form-control" id="estado" maxlength="2">
+      </div>
       <div class="col-md-5">
         <label for="cidade" class="form-label">Cidade</label>
         <input type="text" class="form-control" id="cidade">
@@ -83,12 +88,11 @@
         <label for="bairro" class="form-label">Bairro</label>
         <input type="text" class="form-control" id="bairro">
       </div>
-      <div class="col-md-2">
-        <label for="estado" class="form-label">Estado</label>
-        <input type="text" class="form-control" id="estado" maxlength="2">
-      </div>
-      <div class="col-12">
+      <div class="col-md-3">
         <button type="submit" class="btn btn-lg btn-outline-dark btn-dark" id="botao">Cadastre-se</button>
+      </div>
+      <div class="col-md-8">
+        <p id="msgErroBotao">Preencha todas as informações corretamente.</p>
       </div>
     </form>
 
