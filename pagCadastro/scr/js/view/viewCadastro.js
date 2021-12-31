@@ -16,36 +16,12 @@ function viewMsgErroCEP(){
     $('#estado').val('');
 }
 
-// Mostra a msg de erro ref a senha
-function viewSenha(){
-    $('#msgErroSenha').css('display', 'block');
+// Mostra msg de erro referente ao item passado
+function mostraMsgErro(obj){
+    obj.css('display', 'block');
 }
 
-// Apaga a msg de erro ref a senha
-function unViewSenha(){
-    $('#msgErroSenha').css('display', 'none');
-}
-
-// Mostra a msg de erro ref ao email
-function viewEmail(){
-    $('#msgErroEmail').css('display', 'block');
-}
-
-// Apaga a msg de erro ref ao email
-function unViewEmail(){
-    $('#msgErroEmail').css('display', 'none');
-}
-
-// Mostra a msg de erro ref ao RG
-function viewRG(){
-    $('#msgErroRG').css('display', 'block');
-}
-
-// Apaga a msg de erro ref ao RG
-function unViewRG(){
-    $('#msgErroRG').css('display', 'none');
-}
-
-function viewBotao(){
-    $('#msgErroBotao').css('display', 'block');
+// Apaga msg de erro referente ao item passado
+function escondeMsgErro(obj){
+    obj.css('display', 'none');
 }

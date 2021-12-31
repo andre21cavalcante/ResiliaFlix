@@ -18,12 +18,12 @@ function modelSenha(confSenha){
     // Checa se a senha e a confirmação diferem
     if(confSenha !== $('#senha').val()){
         // Caso defira, exibe msg de erro
-        viewSenha();
+        mostraMsgErro($('#msgErroSenha'))
     }
     // Caso a msg de erro for chamada, e o usuário corrigir, a msg irá sumir 
     else if (confSenha === $('#senha').val() && $('#msgErroSenha').css('display') === 'block'){
         // Apaga a msg de erro
-        unViewSenha();
+        escondeMsgErro($('#msgErroSenha'))
     }
 }
 
@@ -32,12 +32,12 @@ function modelEmail(email){
     if(email.indexOf('@') > 0 && email.indexOf('.', email.indexOf('@')) >= email.indexOf('@')){
         // Checa se a msg de erro está sendo exibida e apaga
         if($('#msgErroEmail').css('display') === 'block'){
-            unViewEmail();
+            escondeMsgErro($('#msgErroEmail'))
         }
     } 
     // Mostra msg de erro
     else {
-        viewEmail();
+        mostraMsgErro($('#msgErroEmail'))
     }
 }
 
@@ -72,10 +72,10 @@ $('#rg').focusout(function(){
     
     if($('#rg').val().length !== 14){
         // Caso não tenham sido, mostra msg de erro
-        viewRG();
+        mostraMsgErro($('#msgErroRG'));
+
     } else if($('#rg').val().length === 14 && $('#msgErroRG').css('display') === 'block'){
-        // Apaga msg de erro
-        unViewRG();
+        escondeMsgErro($('#msgErroRG'));
     }
 });
 
@@ -92,7 +92,7 @@ function modelRG(e, rg){
 
 
 function modelBotao(e){
-
+    // Recebe toda info do user
     const listaDeInputs = [
         $('#nome'),
         $('#email'),
@@ -105,10 +105,11 @@ function modelBotao(e){
         $('#cidade'),
         $('#estado'),
     ]
-
+    // Checa se cada uma foi preenchida
     for(let i = 0; i < listaDeInputs.length; i++){
+        // Caso não tenha sido exibe msg de erro
         if(listaDeInputs[i].val() === ''){
-            viewBotao()
+            mostraMsgErro($('#msgErroBotao'))
             e.preventDefault()
         }
     }
