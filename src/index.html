@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>ResiliaFlix</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark p-4 bg-black ">
+      <div class="container-fluid  ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="./logoResiliaflix.png" class="navbar-brand imagem-logo " href="#">
+        <section class="collapse navbar-collapse justify-content-around menu" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item biri">
+                  <a class="nav-link active borda " aria-current="page" href="index.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item biri">
+                  <a class="nav-link borda active " href="#"><i class="fas fa-user icon-um"></i> Login</a>
+                </li>
+                <li class="nav-item biri">
+                  <a class="nav-link borda active " href="#"><i class="far fa-address-card icon-dois"></i> Cadastre-se</a>
+                </li>
+              </ul>
+              <form class="d-flex cor-especial" id="formulario">
+                <input class="form-control me-2" type="search" placeholder="Digite um filme" aria-label="Search" id="nomeFilme">
+                <button class="btn cor" type="submit" onclick="PesquisaController.paginaDePesquisa()"><i class="fas fa-search"></i></button>
+              </form>
+          </section>
+
+        </div>
+    </nav>
+    
+    
+   <!--  CARROSEL -->
+  <main class= "cor-fundo">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active cursor">
+            <img src="https://s3-eu-west-1.amazonaws.com/kneelbeforeblog/wp-content/uploads/2019/04/25033528/AvengersEG2D_banner-Cropped-920x307.jpg" class="d-block w-100 imagem-carrosel" onclick="PesquisaController.buscaFilmeImg('Avengers: Endgame')" alt="">
+        </div>
+        <div class="carousel-item cursor">
+            <img src="https://www.flixwatch.co/wp-content/uploads/70230640.jpg.webp" class="d-block w-100 imagem-carrosel" onclick="PesquisaController.buscaFilmeImg('Django Unchained')" alt="...">
+        </div>
+        <div class="carousel-item cursor">
+            <img src="https://2.bp.blogspot.com/-IeI5QoT4k1Y/WWIneQMr77I/AAAAAAAADv4/MJyLG1baQAoL2HeAr1RR52U_vwiG78cxACLcBGAs/s1600/At%25C3%25A9%2Bo%2B%25C3%259Altimo%2BHomem%2B01.jpg" class="d-block w-100 imagem-carrosel" onclick="PesquisaController.buscaFilmeImg('Hacksaw Ridge')" alt="...">
+        </div>
+        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+  </main>
+
+  
+    <main class= "container">
+      <div class= "row justify-content-center">
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src= "https://m.media-amazon.com/images/M/MV5BYjc2NTM3ZTEtYzc0ZC00NjQ4LTk3MzktN2I4OWE1NTU3ZDFmXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Pink Flamingos')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Pink Flamingos')"><i class= "fas fa-star" ></i><b>6.1/10 Pink Flamingos</b> </a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Spider-Man')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Spider-Man')"><i class="fas fa-star"></i><b>7.3/10 Spider-Man</b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTQ1NjE4NTU4N15BMl5BanBnXkFtZTgwODkwMDg3NjE@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Gummo')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Gummo')"><i class="fas fa-star"></i><b>6.7/10 Gummo </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('About Time')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('About Time')"><i class="fas fa-star"></i><b>7.8/10 About Time </b></a>
+        </div>
+        
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Spider-Man 2')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Spider-Man 2')"><i class="fas fa-star"></i><b>7.3/10 Spider-Man 2 </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Fight Club')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Fight Club')"><i class="fas fa-star"></i><b>8.8/10 Fight Club </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Avengers: Endgame')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Avengers: Endgame')"><i class="fas fa-star"></i><b>8.4/10 Avengers: Endgame </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Hacksaw Ridge')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Hacksaw Ridge')"><i class="fas fa-star"></i><b>8.1/10 Hacksaw Ridge </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Joker')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Joker')"><i class="fas fa-star"></i><b>8.4/10 Joker </b></a>
+        </div>
+        
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('The Butterfly Effect')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('The Butterfly Effect')"><i class="fas fa-star"></i><b>7.6/10 The Butterfly Effect </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Django Unchained')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Django Unchained')"><i class="fas fa-star"></i><b>8.4/10 Django Unchained </b></a>
+        </div>
+
+        <div class="card p-0 mb-3 m-4 bg-black cursor" style="width: 18rem;">
+          <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="PesquisaController.buscaFilmeImg('Titanic')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Titanic')"><i class="fas fa-star"></i><b>7.8/10 Titanic </b></a>
+        </div>
+      </div>
+    </main>
+
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/controllers/pesquisaFilmeC.js"></script>
+    <script src="./js/models/pesquisaFilmeM.js"></script>
+    <script src="./js/views/pesquisaFilmeV.js"></script>
+  </body>
+    <!--   FOOOTER -->
+    <div class="bg-footer">
+        <footer class="py-5 bg-black ">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3 bg-footer">
+            <li class="nav-item"><a href="#" class="nav-link d cor-footer">Contato</a></li>
+          </ul>
+          <p class="text-center  cor-footer">ResiliaFlix &copy;2022</p>
+        </footer>
+    </div>
+</html>
