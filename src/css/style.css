@@ -4,7 +4,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-color: grey !important;
+    background-color: black!important;
 }
 
 .b-example-divider {
@@ -19,6 +19,10 @@ body{
       width: 5%;
       height: 5%;
     }
+.cor{
+    background-color:  #FF4B1B!important;
+    color: black!important;
+}
     
 .menu{
         font-size: 18px;
@@ -42,9 +46,8 @@ body{
 }
 
 .icon-dois{
-        color: #619699;
+    color: #619699;
 }
-
 
 
 .imagem-carrosel{
@@ -62,3 +65,6 @@ body{
 
 }
 
+.cor-footer{
+    color: #FF4B1B!important;
+}
