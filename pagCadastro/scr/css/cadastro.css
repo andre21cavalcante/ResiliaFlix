@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+.imagem-logo{
+    width: 100px;
+}
+
+.cabeçalho-resilia{
+    display: flex;
+    justify-content: space-around!important;
+}
+
+
+.imagem-carrosel-um{
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 400px;
+}  
+
+.imagem-carrosel-dois{
+    object-fit: cover;
+    height: 400px;
+}
+
+.imagem-carrosel-tres{
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 400px;
+}
+
+.bg-black{
+    background-color: black!important;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #161c24;
+}
+
+
+.containerForm {
+    background-color: #ffffff;
+    max-width: 800px;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px rgba(50, 50, 50, 20%);
+    margin: 50px 20px;
+    
+    align-self: center;
+}
+
+.msgErro {
+    color: #e84600;
+}
+
+#msgErroSenha {
+    display: none;
+}
+
+#msgErroEmail {
+    display: none;
+}
+
+#msgErroRG{
+    display: none;
+}
+
+#botao {
+    
+    color: #ffffff;
+}
+
+#msgErroBotao{
+    display: none;
+    color: #e84600;
+}
+
