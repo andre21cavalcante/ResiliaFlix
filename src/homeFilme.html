@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/homeFilme.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>ResiliaFlix</title>
 </head>
@@ -15,23 +15,27 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <img src="Imagens/logoResiliaflix.png" class="navbar-brand imagem-logo " href="#">
+        <img src="Imagens/logoResiliaflix.png" class="navbar-brand imagem-logo " href="./homeFilme.html">
         <section class="collapse navbar-collapse justify-content-around menu" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item biri">
-                  <a class="nav-link active borda " aria-current="page" href=".//index.html"><i class="fas fa-home"></i> Home</a>
+                <li class="nav-item">
+                  <a class="nav-link active borda " aria-current="page" href="./homeFilme.html"><i class="fas fa-home"></i> Home</a>
                 </li>
-                <li class="nav-item biri">
+                <li class="nav-item">
                   <a class="nav-link borda active " href="#"><i class="fas fa-user icon-um"></i> Login</a>
                 </li>
-                <li class="nav-item biri">
-                  <a class="nav-link borda active " href="#"><i class="far fa-address-card icon-dois"></i> Cadastre-se</a>
+                <li class="nav-item">
+                  <a class="nav-link borda active " href="./html/cadastro.html"><i class="far fa-address-card icon-dois"></i> Cadastre-se</a>
                 </li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn cor" type="submit"><i class="fas fa-search"></i></button>
-              </form>
+  
+              <div class="justify-content-center collapse navbar-collapse" id="navbarSupportedContent"></div>
+                <form class="d-flex collapse navbar-collapse p-3" id="formulario">
+                  <input class="form-control me-2 input" type="search" placeholder="Digite um filme" aria-label="Search" id="nomeFilme">
+                <button class="btn cor" type="submit" onclick="PesquisaController.paginaDePesquisa()"><i class="fas fa-search"></i></button>
+                </form>
+              </div>
+
           </section>
         </div>
     </nav>
@@ -46,13 +50,13 @@
         </div>
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://s3-eu-west-1.amazonaws.com/kneelbeforeblog/wp-content/uploads/2019/04/25033528/AvengersEG2D_banner-Cropped-920x307.jpg" class="d-block w-100 imagem-carrosel" alt="">
+            <img src="https://s3-eu-west-1.amazonaws.com/kneelbeforeblog/wp-content/uploads/2019/04/25033528/AvengersEG2D_banner-Cropped-920x307.jpg" class="d-block w-100 imagem-carrosel cursor" alt="" onclick="PesquisaController.buscaFilmeImg('Avengers: Endgame')">
         </div>
         <div class="carousel-item">
-            <img src="https://www.flixwatch.co/wp-content/uploads/70230640.jpg.webp" class="d-block w-100 imagem-carrosel" alt="..." >
+            <img src="https://www.flixwatch.co/wp-content/uploads/70230640.jpg.webp" onclick="PesquisaController.buscaFilmeImg('Django Unchained')" class="d-block w-100 imagem-carrosel cursor" alt="..." >
         </div>
         <div class="carousel-item">
-            <img src="https://2.bp.blogspot.com/-IeI5QoT4k1Y/WWIneQMr77I/AAAAAAAADv4/MJyLG1baQAoL2HeAr1RR52U_vwiG78cxACLcBGAs/s1600/At%25C3%25A9%2Bo%2B%25C3%259Altimo%2BHomem%2B01.jpg" class="d-block w-100 imagem-carrosel" alt="...">
+            <img src="https://2.bp.blogspot.com/-IeI5QoT4k1Y/WWIneQMr77I/AAAAAAAADv4/MJyLG1baQAoL2HeAr1RR52U_vwiG78cxACLcBGAs/s1600/At%25C3%25A9%2Bo%2B%25C3%259Altimo%2BHomem%2B01.jpg" onclick="PesquisaController.buscaFilmeImg('Hacksaw Ridge')"class="d-block w-100 imagem-carrosel cursor" alt="...">
         </div>
         </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -70,62 +74,62 @@
     <main class= "container">
       <div class= "row justify-content-center">
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src= https://m.media-amazon.com/images/M/MV5BYjc2NTM3ZTEtYzc0ZC00NjQ4LTk3MzktN2I4OWE1NTU3ZDFmXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="..." onclick="FilmesController.filmeImg('Pink Flamingos')">
-          <a href="#" class="btn cor"><i class="fas fa-star"></i><b>6.1/10 Pink Flamingos</b> </a>
+          <img src= "https://m.media-amazon.com/images/M/MV5BYjc2NTM3ZTEtYzc0ZC00NjQ4LTk3MzktN2I4OWE1NTU3ZDFmXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Pink Flamingos')">
+          <a href="#" class="btn cor" onclick="PesquisaController.buscaFilmeImg('Pink Flamingos')"><i class="fas fa-star"></i><b>6.1/10 Pink Flamingos</b> </a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Spider-Man')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>7.3/10 Spider-Man</b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTQ1NjE4NTU4N15BMl5BanBnXkFtZTgwODkwMDg3NjE@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTQ1NjE4NTU4N15BMl5BanBnXkFtZTgwODkwMDg3NjE@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Gummo')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>6.7/10 Gummo </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('About Time')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>7.8/10 About Time </b></a>
         </div>
         
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMzY2ODk4NmUtOTVmNi00ZTdkLTlmOWYtMmE2OWVhNTU2OTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Spider-Man 2')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>7.3/10 Spider-Man 2 </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Fight Club')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.8/10 Fight Club </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Avengers: Endgame')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.4/10 Avengers: Endgame </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Hacksaw Ridge')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.1/10 Hacksaw Ridge </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
-          <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.4/10 joker </b></a>
+          <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Joker')">
+          <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.4/10 Joker </b></a>
         </div>
         
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('The Butterfly Effect')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>7.6/10 The Butterfly Effect </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Django Unchained')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>8.4/10 Django Unchained </b></a>
         </div>
 
         <div class="card p-0 mb-3 m-4 bg-black" style="width: 18rem;">
-          <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" class="card-img-top imagem-posição" alt="...">
+          <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" class="card-img-top imagem-posição cursor" alt="..." onclick="PesquisaController.buscaFilmeImg('Titanic')">
           <a href="#" class="btn cor"><i class="fas fa-star"></i><b>7.8/10 Titanic </b></a>
         </div>
       </div>
@@ -143,11 +147,12 @@
     </div>
 
 
-
-    
-
     <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/views/viewPesquisa.js"></script>
+    <script src="./js/models/modelsPesquisa.js"></script>
+    <script src="./js/controllers/controllerPesquisa.js"></script>
+    <script>PesquisaController.buscaFilme();</script>
     
 </body>
 </html>
