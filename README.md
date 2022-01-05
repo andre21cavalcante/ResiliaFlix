@@ -22,7 +22,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
     <td align="center"><a href="https://github.com/andre21cavalcante"><img src="https://user-images.githubusercontent.com/94079921/148246740-2bb317b6-59bb-4700-b337-456bb37bd501.jpeg" style="border-radius: 50%;" width="100px;" alt=""/><br /><sub><b>André Cavalcante</b></sub></a><br /></td>
     <td align="center"><a href=""><img style="border-radius: 50%;"  width="100px;" alt=""/><br /><sub><b>Felipe Santos</b></sub></a><br /></td>
     <td align="center"><a href=""><img style="border-radius: 50%;" width="100px;" alt=""/><br /><sub><b>Igor Campos</b></sub></a><br /></td>
-    <td align="center"><a href=""><img style="border-radius: 50%;"  width="100px;" alt=""/><br /><sub><b>Karina Cristo</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/karinacristo"><img src="https://user-images.githubusercontent.com/94079921/148248034-0faa538f-631d-438d-afa8-3cf1155fb625.jpeg" style="border-radius: 50%;"  width="100px;" alt=""/><br /><sub><b>Karina Cristo</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Nathalia02-alves"><img src= "https://user-images.githubusercontent.com/94079921/148247644-7d7e10dd-ceb6-45d1-b449-f07ac52a515e.jpeg" style="border-radius: 50%;"  width="100px;" alt=""/><br /><sub><b>Nathália Alves</b></sub></a><br /></td>
   </tr>
 </table>
