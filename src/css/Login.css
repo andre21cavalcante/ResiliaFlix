@@ -2,7 +2,7 @@
 
 
 
-body {background: url(./resiliaflix\ \(2\).jpg);
+body {background: url(./../Imagens/resiliaflix.jpg);
     height: 100vh;
     width: 100%;
     background-color: black!important;
@@ -83,6 +83,8 @@ body {background: url(./resiliaflix\ \(2\).jpg);
     height: 100vh;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    margin: 100px;
 
 }
 
@@ -287,13 +289,13 @@ body {
     float:left;
 }
 
-footer {
+/* footer {
     
     margin-top: auto;
     background-color: black;
     flex-direction: column;
     float:left;
-}
+} */
 
 
 li {
