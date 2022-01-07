@@ -12,7 +12,7 @@ class PesquisaController {
     }
     static pegaFilme(){
         localStorage.setItem('novoFilme', document.getElementById("nomeFilme").value);
-        location.href="./pesquisaFilme.html";
+        location.href="./src/html/pesquisaFilme.html";
     }
     static buscaFilmebarra(){
         let model = new PesquisaModel();
